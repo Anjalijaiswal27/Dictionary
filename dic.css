@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.translate-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.translate-section select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background-color: #282b67;
+  color: #d2d2d2;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 20px;
+  background-color: var(--popup-bg);
+  border: 2px solid var(--popup-border);
+  border-radius: 12px;
+  max-width: 80%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--popup-text);
+  cursor: pointer;
+}
+
+
+body{
+    background-image: url(darktheme.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: black; 
+} 
+
+.container {
+    width: 90%; /* Set a max-width to contain the elements */
+    max-width: 800px; /* Set a max-width for larger screens */
+    padding: 1rem;
+}
+
+.card{
+    /* max-width: 90%; */
+    background-color: rgb(10, 3, 53);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.property{
+    color: beige;
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem 0;
+    column-gap: 1rem;
+}  
+
+.search-form{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: nowrap; */
+    width: 100%;
+    /* height: 10vh; */
+    margin-bottom:2rem ;
+    background-color: rgb(10, 3, 53);
+    border-radius: 1rem;
+}
+
+.search-form input,
+.search-form button{
+    width: 100%;
+    /* flex-basis: 70%; */
+    font-size: 1rem;
+    padding: .6rem 0rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: blanchedalmond;
+    margin: 0.5rem 0;
+}
+
+
+.search-form button{
+    /* flex-basis: 30%; */
+    cursor: pointer;
+    /* border-left: 1px solid rgb(29, 9, 161); */
+    
+}
+
+.translate{
+    border: 1.5px transparent;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: green;
+    cursor: pointer;
+}
+
+.translate:hover{
+    border-radius: 0.5rem;
+    border:1px solid rgb(60, 195, 98);
+    box-shadow: rgba(1, 6, 52, 0.1) 0px 4px 12px;
+}
+
+.border{
+    border: 1.5px transparent;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.input{
+    border-radius: 12px;
+}
+.border:hover{
+    border-radius: 0.5rem;
+    border:1px solid rgb(17, 21, 128);
+    box-shadow: rgba(1, 6, 52, 0.1) 0px 4px 12px;
+}
+
+.bod{
+    border: 1.5px transparent;
+    padding: 0.5px;
+}
+
+.bod:hover{
+    border-radius: 1rem;
+    border:1px solid rgb(16, 5, 91);
+    box-shadow: rgb(3, 27, 52) 0px 20px 30px -10px;
+    
+}
+
+.meaning {
+    margin-top: 1rem;
+    color: beige;
+}
+
+.meaning ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.meaning li {
+    margin-bottom: 0.5rem;
+    color: #d2d2d2;
+}
+
+#dictionaryArea {
+    color: white; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(10, 3, 53, 0.9);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+/* THEME VARIABLES */
+:root {
+  --bg-color: #0a0335;
+  --text-color: rgb(255, 235, 205);
+  --input-bg: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --popup-bg: #2c2c2c;
+  --popup-border: #444444;
+  --popup-text: beige;
+}
+
+body.light-theme {
+  --bg-color: #F6F0F0;
+  --text-color: #0b0b0b;
+  --input-bg: #F2E2B1;
+  --card-bg: #F6F0F0;
+  --popup-bg: #ffffff;
+  --popup-border: #cccccc;
+  --popup-text: rgb(4, 4, 4);
+}
+body.light-theme .border:hover {
+  border: 1px solid #BDB395;
+  box-shadow: rgb(128, 109, 81) 0px 4px 12px;
+}
+body.light-theme .bod:hover{
+    border:1px solid #BDB395;
+    box-shadow: rgb(247, 195, 118) 0px 20px 30px -10px; 
+}
+
+body.light-theme .meaning {
+    color: rgb(34, 34, 12);
+}
+
+body.light-theme .translate-section select {
+  background-color: #D5C7A3;
+  color: #1d1616;
+}
+
+body.light-theme .translate{
+    background-color: #BDB395;
+}
+
+body.light-theme .property{
+    color: rgb(0, 0, 0);
+}  
+
+body.light-theme{
+    background-image: url(light.webp);
+}
+
+
+body.light-theme .meaning li {
+    color: #3d3535;
+}
+
+body.light-theme #dictionaryArea {
+    color: rgb(0, 0, 0); 
+}
+
+body.light-theme .navbar {
+    background-color: #F2E2B1;
+    box-shadow: rgb(247, 195, 118) 0px 20px 30px -10px;
+}
+
+body.light-theme .nav-links a {
+  color: rgb(14, 13, 13);
+}
+
+body.light-theme .nav-links a:hover {
+  color: rgb(186, 91, 91);
+}
+
+body.light-theme .site-title {
+    color: rgb(14, 13, 13);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-form {
+  background-color: var(--card-bg);
+}
+
+.search-form input,
+.search-form button {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+}
+   
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.3s;
+}
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+
+.site-title {
+    flex: 1;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: bold;
+    color: blanchedalmond;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: blanchedalmond;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgb(195, 119, 92);
+}
+
+/* Adjust container position since navbar is fixed */
+body {
+    padding-top: 80px; /* Adjust depending on navbar height */
+}
+
+
+@media (max-width: 600px) {
+    .search-form {
+        flex-direction: column;
+        width: 100%; /* Full width for small screens */
+    }
+
+    .search-form input,
+    .search-form button {
+        width: 100%; /* Ensure buttons and inputs take full width */
+    }
+
+    .dictionary-app {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .card {
+        padding: 1rem; /* Reduce padding */
+    }
+
+    .navbar-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-title {
+    margin: 10px 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
